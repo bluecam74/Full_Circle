@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/transactions.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Special+Elite|Arvo|Pacifico" rel="stylesheet">
+    <title>Transactions</title>
+</head>
+
+<body>
+    <div class="transac">
+
+        <!--Setting the Image for the background-->
+        <div class="background-transactions">
+
+            <br>
+            <!--Sorry I had to use it I tried padding and margin and it would distort my background :( -->
+
+            <!--Content Starts Here-->
+
+            <!--Reimburesment form-->
+            <div class="container-fluid contback">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h1 class="header">Transactions and Payments</h1>
+                        <hr class="paymline">
+                        <h2 class="infoheader">Please submit a reimbursement request.</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Amount</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter Amount">
+                            </div>
+                            <form>
+                                <div class="form-group">
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                </div>
+                            </form>
+                            <button type="submit" class="btn btn-primary submit-requestbtn">Submit Request</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row requests">
+                    <div class="col-sm-12 col-md-6">
+                        <h3 class="pendRequests">Pending Requests</h3>
+                        <div class="listpendreq">
+                            <ul>
+                                <li>No pending requests</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <h3 class="appRequests">Approved Requests</h3>
+                        <div class="listappreq">
+                            <ul>
+                                <li>No current approved requests</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

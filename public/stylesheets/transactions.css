@@ -1,0 +1,79 @@
+/*styles for the background image*/
+.transac .background-transactions {
+    background-image: url(../images/bottle_hand.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+
+.transac .row {
+margin-right: 0px !important;
+margin-left: 0px !important;
+}
+
+/*styles for logo*/
+.transac-logo {
+margin-left: 20px;
+margin-top: 20px;
+}
+
+/*styles for content*/
+.transac .header {
+font-family: 'Special Elite', cursive;
+font-size: 3rem;
+padding-bottom: 3px;
+padding-top: 25px;
+}
+
+.paymline {
+border: 1
+}
+
+.transac .container {
+align-content: center !important;
+}
+
+.transac .contback {
+width: 75%;
+font-family: 'Montserrat', sans-serif;
+background: rgb(255, 255, 255, 0.5) !important;
+text-align: center;
+justify-content: center !important;
+border-radius: 10px;
+}
+
+.transac .btn {
+background: #943e08;
+color: white;
+border: none;
+}
+
+.transac .btn:hover {
+background: black;
+}
+
+.transac .btn a {
+font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+list-style: none;
+}
+
+.form-group {
+width: 50%;
+margin: 0 auto;
+}
+
+.requests {
+padding-top: 30px;
+padding-bottom: 55px;
+}
+
+/*text styles for content hr*/
+.line {
+border: solid 1px black;
+}
+
