@@ -1,0 +1,46 @@
+/*styles for the background image*/
+body {
+    background: url(../images/bottle_hand.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/*styles for the container and all its content*/
+.kioskback {
+    width: 75% !important;
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(255, 255, 255, 0.5) !important;
+    text-align: center;
+    justify-content: center !important;
+    border-radius: 10px;
+}
+.header{
+    font-family: 'Special Elite', cursive;
+    padding-top: 15px;
+    font-size: 55px;
+}
+.reqline {
+    border: solid 1px black;
+}
+.btn-primary {
+    color: white;
+    background-color: #943e08 !important; 
+    border: none !important;
+}
+.btn-primary:hover {
+    color: white;
+    background-color: black !important;
+}
+.button-div {
+    padding: 15px !important;
+}
+.requests {
+    text-align: left;
+    font-weight: bolder;
+}
+.approvals {
+    text-align: left;
+    font-weight: bolder;
+    padding-bottom: 20px;
+}

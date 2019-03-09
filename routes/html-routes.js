@@ -32,4 +32,8 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/transactions.html"));
   });
 
+  app.get("/kiosk", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/kiosk.html"));
+  });
+
 };

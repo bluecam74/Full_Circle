@@ -59,31 +59,6 @@ li a:hover {
       max-width:100%;
 }
 
-/* carousel styles */
-.carousel-inner img {
-    width: 100%;
-    height: 100%;
-}
-
-.carousel-caption {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.carousel-caption h1 {
-    font-size: 75px;
-    text-transform: uppercase;
-    font-family: 'Inconsolata', cursive;
-    text-shadow: 1px 1px 1px 15px #fff;
-}
-
-.carousel-caption h3 {
-    font-size: 40px;
-    text-shadow: 1px 1px 1px 10px #fff;
-    padding-bottom: 10px;
-}
-
 /* buttons */
 .btn {
     background-color: #943e08 !important;
@@ -183,7 +158,7 @@ li a:hover {
 }
 
 /* fontawesome icons */
-.fa-user-circle {
+.fa-tools {
     color: #943e08 ;
 }
 
@@ -234,12 +209,15 @@ li a:hover {
 }
 
 .fa-facebook {
-    color: darkblue;
-    
+    color: black;   
+}
+
+.fa-twitter {
+    color: black;
 }
 
 .fa-google-plus-g {
-    color: darkred;
+    color: black;
 }
 
 .fa-github {
@@ -265,8 +243,17 @@ li a:hover {
     padding-left: 10px; 
     padding-top: 15px;
   }
-.card-img-top{
-}
+
+  h2 {
+      padding-top: 10px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 45px;
+  }
+
+  p {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+  }
 /*
 Extra Small {xs} devices (portrait phones, less than 576px)
 No Media query since this is the default in Bootstrap
