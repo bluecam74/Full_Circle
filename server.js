@@ -22,6 +22,9 @@ app.use(passport.session());
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static('client/build'));
+}
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
