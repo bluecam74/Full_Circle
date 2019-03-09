@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="css/transactions.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/transactions.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Special+Elite|Arvo|Pacifico" rel="stylesheet">
@@ -20,7 +20,7 @@
         <!--Setting the Image for the background-->
         <div class="background-transactions">
 
-            <br>
+            <br><br><br><br>
             <!--Sorry I had to use it I tried padding and margin and it would distort my background :( -->
 
             <!--Content Starts Here-->
@@ -34,16 +34,21 @@
                         <h2 class="infoheader">Please submit a reimbursement request.</h2>
                         <form>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Amount</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" placeholder="Enter Amount">
+                                <label for="amount">Amount:</label>
+                                <input type="text" class="form-control mb-3" id="amount"
+                                    aria-describedby="amountHelp" placeholder="Enter Amount">
                             </div>
-                            <form>
+                            <div class="form-group">
+                                <label for="voucherNum">Voucher # (from receipt):</label>
+                                <input type="text" class="form-control mb-3" id="voucherNum"
+                                    aria-describedby="voucherHelp" placeholder="Enter the Voucher Number found on your receipt">
+                            </div>
+                            <!-- <form>
                                 <div class="form-group">
                                     <input type="file" class="form-control-file" id="exampleFormControlFile1">
                                 </div>
-                            </form>
-                            <button type="submit" class="btn btn-primary submit-requestbtn">Submit Request</button>
+                            </form> -->
+                            <button type="submit" class="btn btn-primary submit-requestbtn my-3">Submit Request</button>
                         </form>
                     </div>
                 </div>
@@ -70,5 +75,9 @@
     </div>
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="./js/transactions.js"></script>
+
 
 </html>
