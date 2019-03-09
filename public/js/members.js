@@ -181,8 +181,8 @@ $(document).ready(function() {
   
   var map = new H.Map(document.getElementById('map'),
     defaultLayers.normal.map, {
-      center: {lat: -37.7942, lng: -122.4070},
-      zoom: 15
+      center: {lat: 34.052235, lng: -118.243683},
+      zoom: 5
     });
   
   var placesContainer = document.getElementById('panel');

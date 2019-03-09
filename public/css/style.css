@@ -313,7 +313,6 @@ body {
 .profile #button-addon2 {
   color: white;
 }
-
 /*
 Extra Small {xs} devices (portrait phones, less than 576px)
 No Media query since this is the default in Bootstrap
