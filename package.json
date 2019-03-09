@@ -1,5 +1,5 @@
 {
-  "name": "1-Passport-Example",
+  "name": "Full_Circle",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -20,4 +20,5 @@
     "passport-local": "^1.0.0",
     "sequelize": "^4.3.1"
   }
+
 }
