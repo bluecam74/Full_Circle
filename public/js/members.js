@@ -72,7 +72,7 @@ $(document).ready(function () {
    */
   function onResult(result) {
     var places = result.results.items;
-    console.log(result);
+    // console.log(result);
     /*
      * The styling of the places response on the map is entirely under the developer's control.
      * A representative styling can be found the full JS + HTML code of this example
@@ -214,7 +214,7 @@ $(document).ready(function () {
   }
 
   var inputthree = []
-  console.log(inputthree);
+  // console.log(inputthree);
   document.getElementById("button-addon2").onclick = function searchtwo() {
     inputthree.push(document.getElementById("input-locate").value);
     geocode(platform);
@@ -335,7 +335,7 @@ $(document).ready(function () {
 
           nodeOL.appendChild(li);
           inputtwo.push(position.lat, position.lng);
-          console.log(inputtwo);
+          // console.log(inputtwo);
           (position.lng);
         }
 
