@@ -164,21 +164,38 @@ $(document).ready(function () {
     nodeOL.style.marginRight = '5%';
 
 
-    for (i = 0; i < places.length; i += 1) {
-      var li = document.createElement('li'),
-        divLabel = document.createElement('div'),
-        content = '<strong style="font-size: large;">' + places[i].title + '</strong>';
-      content += '&nbsp;<span style="font-size:smaller">(' + places[i].category.title + ')</span></br>';
-      content += places[i].vicinity + '</br>';
-      content += '<strong>distance:</strong>' + places[i].distance + 'm</br>';
+  //   for (i = 0; i < places.length; i += 1) {
+  //     var li = document.createElement('li'),
+  //       divLabel = document.createElement('div'),
+  //       content = '<strong style="font-size: large;">' + places[i].title + '</strong>';
+  //     content += '&nbsp;<span style="font-size:smaller">(' + places[i].category.title + ')</span></br>';
+  //     content += places[i].vicinity + '</br>';
+  //     content += '<strong>distance:</strong>' + places[i].distance + 'm</br>';
 
-      divLabel.innerHTML = content;
-      li.appendChild(divLabel);
-      nodeOL.appendChild(li);
-    }
+  //     divLabel.innerHTML = content;
+  //     li.appendChild(divLabel);
+  //     nodeOL.appendChild(li);
+  //   }
 
-    placesContainer.appendChild(nodeOL);
+  //   placesContainer.appendChild(nodeOL);
+  // }
+
+  for (i = 0; i < places.length; i += 1) {
+    var li = document.createElement('li'),
+      divLabel = document.createElement('div'),
+      content = '<strong style="font-size: large;">' + places[i].title + '</strong>';
+    content += '&nbsp;<span style="font-size:smaller">(' + places[i].category.title + ')</span></br>';
+    content += places[i].vicinity + '</br>';
+    content += '<strong>distance:</strong>' + places[i].distance + 'm</br>';
+
+    li.setAttribute("id", "listy")
+    divLabel.innerHTML = content;
+    li.appendChild(divLabel);
+    nodeOL.appendChild(li);
   }
+
+  placesContainer.appendChild(nodeOL);
+}
 
   var myid = config.app_id;
   var secretcode = config.app_code;
