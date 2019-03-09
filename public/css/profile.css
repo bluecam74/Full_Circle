@@ -1,0 +1,254 @@
+/*font imported*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Special+Elite|Inconsolata');
+
+/*body styles*/
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*navigation styles*/
+.navigation {
+    z-index: 2;
+    color: white;
+    top: 5%;
+    position: absolute;
+    width: 100%;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+li {
+    float: right;
+    padding: 5px;
+    margin-right: 15px;
+}
+
+li .dashboardli {
+    margin-right: 30px; 
+}
+
+li a:hover {
+    text-decoration: none;
+    color: #943e08;
+}
+
+.navHR {
+    border: solid 2px whitesmoke;
+    width: 60%;
+    float: left;
+}
+.navbar {
+    background-color: #514f3f;
+    color: white;
+    font-size: 15px;
+    position:absolute;
+      width:100%;
+      z-index:10;
+      max-width:100%;
+}
+
+/* carousel styles */
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-caption h1 {
+    font-size: 75px;
+    text-transform: uppercase;
+    font-family: 'Inconsolata', cursive;
+    text-shadow: 1px 1px 1px 15px #fff;
+}
+
+.carousel-caption h3 {
+    font-size: 40px;
+    text-shadow: 1px 1px 1px 10px #fff;
+    padding-bottom: 10px;
+}
+
+/* buttons */
+.btn-primary {
+    background-color: #943e08 !important;
+    border: 1px solid #943e08 !important;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.parallax-window {
+    min-height: 800px;
+    background: transparent;
+    min-width: 100%;
+}
+
+.parallax-window-2 {
+    min-height: 500px;
+    background: transparent;
+}
+
+.parallax-window-3 {
+    min-height: 500px;
+    background: transparent;
+}
+
+.parallax-window-4 {
+    min-height: 500px;
+    background: transparent;
+}
+
+/*Text styles for parallax (1)*/
+.headWelcome {
+    font-family: 'Montserrat', sans-serif;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.headFC {
+    font-family: 'Special Elite', cursive;
+    z-index: 2;
+    position: absolute;
+    top: 57%;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 75px;
+}
+
+.logo {
+    z-index: 3;
+    position: absolute;
+    top: 52%;
+    align-content: center;
+    margin-left: 20px;
+}
+ /* .jumbotron {
+    padding: 1rem !important;
+    border-radius: 0 !important;
+    background-color: tomato !important;
+}  */
+
+/*dashboard styles*/
+.padding {
+    padding-top: 35px;
+    padding-bottom: 40px;
+}
+
+.welcome {
+    width: 75%;
+    padding-top: 85px;
+    margin: 0 auto !important;
+}
+
+.welcome hr {
+    border-top: 2px solid #514f3f;
+    width: 95%;
+    margin-top: .3rem;
+    margin-bottom: 1rem;
+}
+
+/* fontawesome icons */
+.fa-user-circle {
+    color: #943e08 ;
+}
+
+.fa-money-bill-alt {
+    color: #678726;
+}
+
+.fa-hat-wizard {
+    color: #1e407c;
+}
+
+/* search and rate page */
+
+.dashboard {
+    width: 75%;
+    padding-top: 85px;
+    margin: 0 auto !important;
+}
+
+.dashboard hr {
+    border-top: 2px solid #514f3f;
+    width: 95%;
+    margin-top: .3rem;
+    margin-bottom: 1rem;
+}
+
+.input-group {
+    width: 70% !important;
+    margin: 0 auto !important;
+}
+
+.input-group-append {
+    background-color:#943e08;
+}
+
+#button-addon2 {
+    color: white;
+}
+/*footer styles*/
+.footerHR {
+    width: 75%;
+    border: solid 2px #514f3f;
+}
+
+.social {
+    margin-bottom: 30px;
+
+}
+
+.fa-facebook {
+    color: darkblue;
+    
+}
+
+.fa-google-plus-g {
+    color: darkred;
+}
+
+.fa-github {
+    color: black;
+}
+
+.social a {
+    padding: 20px;
+}
+
+
+/* 
+Extra Small {xs} devices (portrait phones, less than 576px)
+No Media query since this is the default in Bootstrap
+
+Small {sm} devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium {md} devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large {lg} devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra Large {xl} devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
