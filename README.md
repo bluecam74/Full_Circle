@@ -37,4 +37,4 @@ In hopes in creating a society with an ingrained sense of environmental wellbein
 * Malak Abdul - [GitHub@bluecam74](https://github.com/bluecam74)
 * Rachel Bautista - [GitHub@rachbaut](https://github.com/rachbaut)
 * Mario Miramontes - [GitHub@MMthree](https://github.com/MMthree)
-* Jacob Casas - [GitHub@come2america](https://github.com/jcasas5253)
+* Jacob Casas - [GitHub@jcasas5253](https://github.com/jcasas5253)
