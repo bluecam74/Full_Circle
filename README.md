@@ -1,4 +1,4 @@
-<p align="center"><img src="./images/fc_home_preview.png" alt="Full Circle Preview" width="650"></p>
+<p align="center"><img src="./public/images/fc_home_preview.png" alt="Full Circle Preview" width="650"></p>
 
 ## About Us
 
