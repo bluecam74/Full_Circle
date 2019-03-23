@@ -10,7 +10,7 @@ module.exports = function(app) {
     // Since we're doing a POST with javascript, we can't actually redirect that post into a GET request
     // So we're sending the user back the route to the members page because the redirect will happen on the front end
     // They won't get this or even be able to access this page if they aren't authed
-    res.json("/members");
+    res.json("/index");
   });
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
@@ -25,7 +25,7 @@ module.exports = function(app) {
       res.redirect(307, "/api/login");
     }).catch(function(err) {
       console.log(err);
-      res.json(err);
+      // res.json(err);
       // res.status(422).json(err.errors[0].message);
     });
   });
@@ -52,25 +52,38 @@ module.exports = function(app) {
     }
   });
 
-  app.post("/api/transactions", function(req, res) {
-    console.log(req.body);
-    if(!req.body.userId || !req.body.amount) {
-        return res.status(400).json({msg: new Error("Please put all data on body")});
-    }
-    var pending = {
-        userId: req.body.userId,
-        amount: req.body.amount,
-        voucherNum: req.body.voucherNum
-    };
+  app.post("/transactions/create",function(req,res){
+    db.Transactions.create({
+      amount: req.body.amount, 
+      voucherNum: req.body.voucherNum,
+      createdAt: req.body.createdAt, 
+      UserId: req.user.id
+  }).then(function(dbTransactions){
+      res.redirect('/transactions');
+  });
+});
 
-    db.Pending.create(pending)
-    .then(function(resp) {
-        res.status(201).json({msg: "Pending Request Created"})
-    })
-    .catch(function(err) {
-        res.status(400).json({msg: err.toString()});
-    })
-})
+
+app.put("/update/kiosk/:id",function(req,res){
+  console.log("app.put");
+
+  var condition = "id = " + req.params.id;
+  console.log("COndi", condition);
+  // db.Transactions.update({
+  //     approved: req.body.approved
+  // }, condition, function (result) {
+  //   res.redirect("/kiosk");
+  // });
+  db.Transactions.update(req.body,
+    {
+      where: {
+        id: req.params.id
+      }
+  }).then(function(dbTransactions){
+    console.log(req.body);
+      res.json(dbTransactions);
+  });
+  });
 
 
 };

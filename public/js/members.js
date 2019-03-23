@@ -156,6 +156,10 @@ $(document).ready(function () {
    */
   function addPlacesToPanel(places) {
 
+    //var placesContainer = document.getElementById('panel');
+
+    // $("#panel").empty();
+
     var nodeOL = document.createElement('ul'),
       i;
 
@@ -164,28 +168,45 @@ $(document).ready(function () {
     nodeOL.style.marginRight = '5%';
 
 
-    for (i = 0; i < places.length; i += 1) {
-      var li = document.createElement('li'),
-        divLabel = document.createElement('div'),
-        content = '<strong style="font-size: large;">' + places[i].title + '</strong>';
-      content += '&nbsp;<span style="font-size:smaller">(' + places[i].category.title + ')</span></br>';
-      content += places[i].vicinity + '</br>';
-      content += '<strong>distance:</strong>' + places[i].distance + 'm</br>';
+  //   for (i = 0; i < places.length; i += 1) {
+  //     var li = document.createElement('li'),
+  //       divLabel = document.createElement('div'),
+  //       content = '<strong style="font-size: large;">' + places[i].title + '</strong>';
+  //     content += '&nbsp;<span style="font-size:smaller">(' + places[i].category.title + ')</span></br>';
+  //     content += places[i].vicinity + '</br>';
+  //     content += '<strong>distance:</strong>' + places[i].distance + 'm</br>';
 
-      divLabel.innerHTML = content;
-      li.appendChild(divLabel);
-      nodeOL.appendChild(li);
-    }
+  //     divLabel.innerHTML = content;
+  //     li.appendChild(divLabel);
+  //     nodeOL.appendChild(li);
+  //   }
 
-    placesContainer.appendChild(nodeOL);
+  //   placesContainer.appendChild(nodeOL);
+  // }
+
+  for (i = 0; i < places.length; i += 1) {
+    var li = document.createElement('li'),
+      divLabel = document.createElement('div'),
+      content = '<div class="col-lg-12"><strong style="font-size: large;">' + places[i].title + '</strong></div>';
+    content += '&nbsp;<div class="col-lg-12"><span style="font-size:smaller">(' + places[i].category.title + ')</span></div></br>';
+    content += '<div class="col-lg-12">' + places[i].vicinity + '</br></div>';
+    content += '<div class="col-lg-12"><strong>distance:</strong>' + places[i].distance + 'm</br></div>';
+
+    li.setAttribute("id", "listy")
+    divLabel.innerHTML = content;
+    li.appendChild(divLabel);
+    nodeOL.appendChild(li);
   }
+  
+  $("#panel").append(nodeOL);
+}
 
-  var myid = config.app_id;
-  var secretcode = config.app_code;
+  // var myid = config.app_id;
+  // var secretcode = config.app_code;
   // 1. initialize platform
   var platform = new H.service.Platform({
-    app_id: myid,
-    app_code: secretcode,
+    app_id: '3n716rcwctobRYYBvpGs',
+    app_code: 'fAE4wQuksVnIz4NJ0l4_5Q',
     useHTTPS: true,
     useCIT: true
   });
@@ -198,7 +219,7 @@ $(document).ready(function () {
       zoom: 5
     });
 
-  var placesContainer = document.getElementById('panel');
+  
 
   // add map behavior
 

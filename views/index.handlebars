@@ -1,27 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="./stylesheets/members.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Special+Elite" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css" />
-  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
-  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
-  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
-  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
-  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-places.js"></script>
-  <title>Profile</title>
-</head>
-
-<body>
-  <!--Navigation Bar-->
+<link rel="stylesheet" type="text/css" href="./stylesheets/members.css">
+{{!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> --}}
+<!--Navigation Bar-->
   <div class="profile">
     <!--Image Parallax Header-->
     <div class="parallax-window" data-parallax="scroll" data-image-src="images/person_forest.jpg">
@@ -96,7 +76,7 @@
         </div> -->
     <!--Image Parallax 2-->
     <div class="parallax-window-2" data-parallax="scroll" data-image-src="images/bottle_hand.jpg"></div>
-    <!--Search Map/Ratings Section/Two Column Section-->
+    <!--Search/Ratings Section/Two Column Section-->
     <div class="container-fluid padding">
       <div class="row dashboard text-center">
         <div class="col-md-12">
@@ -111,10 +91,10 @@
           </div>
         </div>
         <div class="col-lg-12">
-          <img src="images/maps_placeholder.png" class="image-fluid" width="800px" height="400px">
-          <!-- <button id="btn-location">Find a Recycle center</button>
-          <div id="map" style="width: 600px; height: 400px; background: grey"></div>
-          <div id="panel" style="width: 600px;"></div> -->
+            <p>Click the button bellow to use your device's GPS location to find a recycle center near you!</p>
+          <button id="btn-location" class="btn btn-outline-secondary" type="button">GPS</button>
+          <div id="map" style="width: 100%; height: 400px; background: grey"></div>
+          <div id="panel" style="width: 600px"></div>
         </div>
       </div>
     </div>
@@ -129,12 +109,12 @@
         <div class="col-lg-12">
           <h2>About the Company</h2>
           <hr class="my-4">
-          <p>Full Circle was founded in 2017 after the realization that retrieving money from recycle 
-            was a hassle and this was deterring many people from completing the task. </p>
+          <p>Full Circle was founded in 2018 after the realization that retrieving money from recycling 
+            was a hassle that was deterring many people from completing the task. </p>
             <p>In hopes in creating a society with an ingrained sense of environmental wellbeing, 
             we are making recycling not only a feel-good concept, but a convenient one. </p>
           <p>As we continue to seek improvements for our application and your experience, we look 
-            forward to helping both you and future generations enjoy green, happy earth. 
+            forward to helping both you and future generations enjoy a green, happy earth. 
           </p>
         </div>
       </div>
@@ -226,7 +206,3 @@
   <script type="text/javascript" src="js/members.js"></script>
   <script src="./parallax.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-</body>
-
-</html>

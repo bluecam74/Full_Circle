@@ -1,0 +1,64 @@
+    <link rel="stylesheet" type="text/css" href="../stylesheets/transactions.css">
+<!--Setting the Image for the background-->
+
+<div class="background-transactions">
+
+    <br><br><br><br>
+    <!--Sorry I had to use it I tried padding and margin and it would distort my background :( -->
+
+    <!--Content Starts Here-->
+
+    <!--Reimburesment form-->
+    <div class="container-fluid contback">
+        <div class="row text-center">
+            <div class="col-12">
+                <h1 class="header">Transactions and Payments</h1>
+                <hr class="paymline">
+                <h2 class="infoheader">Please submit a reimbursement request.</h2>
+                <form id="newReq" action="/transactions/create" method="POST">
+                    <div class="form-group">
+                        <label for="amount">Amount:</label>
+                         <input type="text" name="amount" class="form-control text-center" maxlength="50" placeholder="Enter Amount">
+                    </div>
+                    <div class="form-group">
+                        <label for="voucherNum">Voucher # (from receipt):</label>
+                        <input type="text" name="voucherNum" class="form-control text-center" maxlength="50" placeholder="Enter Voucher Number found on you receipt">
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-request btn my-3">Submit Request</button>
+                </form>
+            </div>
+        </div>
+        <div class="row requests">
+            <div class="col-sm-12 col-md-6">
+                <h3 class="pendRequests">Pending Requests</h3>
+                <div class="listpendreq text-left">
+                    {{#each transactions}}
+                            {{#unless this.approved}}
+                                <ul>
+                                    <li>Voucher ID: {{voucherNum}}</li>
+                                    <li>Amount Requested: {{amount}}</li>
+                                    <li>Date Created: {{createdAt}}</li>
+                                </ul>
+                            {{/unless}}
+                    {{/each}}
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <h3 class="appRequests">Approved Requests</h3>
+                <div class="listappreq">
+                     {{#each transactions}}
+                        {{#if this.approved}}
+                            <ul>
+                                <li>
+                                    <button disabled class="btn btn-mustard devoured">{{amount}}</button>
+                                    <span class="badge badge-pill badge-light btn-lettuce">Eaten by {{Customer.Name}}!</span>
+                                </li>
+                            </ul>
+                        {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/transactions.js"></script>

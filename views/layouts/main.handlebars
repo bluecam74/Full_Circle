@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> --}}
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="icon" href="assets/images/favicon copy.ico">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Special+Elite" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css" />
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+        <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-places.js"></script>
+        <title>Home Page</title>
+    </head>
+    <body>
+        {{{ body }}}
+    </body>
+    {{!-- <script>
+        // Add Method to Validator (No Spaces)
+        jQuery.validator.addMethod("noSpace",function(value,element){ 
+            return value.indexOf(" ") < 0 || value.indexOf(" ") > 0
+        },"Spaces are not allowed");
+        // Allow Popovers
+        $("[data-toggle=popover]").popover();
+        $("[data-toggle=popover]").on('click',function(e){
+            $("[data-toggle=popover]").not(this).popover('hide');
+            // Validate POST Customer + PUT Burger Form
+            $("#customer").validate({
+                rules: { customer_name: { required: true, noSpace: true } },   
+                errorClass: "errorMessage"
+            });
+        });
+        // Validate POST Burger Form
+        $("#newBurger").validate({
+            rules: { burger_name: { required: true, noSpace: true } },   
+            errorClass: "errorMessage"
+        });
+    </script> --}}
+</html>

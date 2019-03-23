@@ -21,7 +21,8 @@ $("#sub-req").on("click", function (e) {
 function pendingPost(amount, voucherNum) {
     $.post("/api/transactions", {
         amount: amount,
-        voucherNum: voucherNum
+        voucherNum: voucherNum, 
+        UserId: UserId
     }).then(function(data) {
       window.location.replace(data);
       // If there's an error, handle it by throwing up a bootstrap alert

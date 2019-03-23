@@ -1,14 +1,22 @@
 /*styles for the background image*/
-.transac .background-transactions {
+body {
+    background: url(../images/bottle_hand.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* .transac .background-transactions {
     background-image: url(../images/bottle_hand.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
-}
+} */
 
-.transac .row {
+ .row {
 margin-right: 0px !important;
 margin-left: 0px !important;
 }
@@ -20,7 +28,7 @@ margin-top: 20px;
 }
 
 /*styles for content*/
-.transac .header {
+ .header {
 font-family: 'Special Elite', cursive;
 font-size: 3rem;
 padding-bottom: 3px;
@@ -31,11 +39,11 @@ padding-top: 25px;
 border: 1
 }
 
-.transac .container {
+ .container {
 align-content: center !important;
 }
 
-.transac .contback {
+.contback {
 width: 75%;
 font-family: 'Montserrat', sans-serif;
 background: rgb(255, 255, 255, 0.5) !important;
@@ -44,17 +52,17 @@ justify-content: center !important;
 border-radius: 10px;
 }
 
-.transac .btn {
+.btn {
 background: #943e08;
 color: white;
 border: none;
 }
 
-.transac .btn:hover {
+ .btn:hover {
 background: black;
 }
 
-.transac .btn a {
+.btn a {
 font-family: 'Montserrat', sans-serif;
 }
 
@@ -77,3 +85,14 @@ padding-bottom: 55px;
 border: solid 1px black;
 }
 
+li {
+    font-weight: bolder;
+}
+
+.pendRequests {
+    font-weight: bolder;
+}
+
+.appRequests {
+    font-weight: bolder;
+}
