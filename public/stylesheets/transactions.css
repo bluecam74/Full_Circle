@@ -39,7 +39,7 @@ padding-top: 25px;
 border: 1
 }
 
- .container {
+.container {
 align-content: center !important;
 }
 
@@ -52,18 +52,23 @@ justify-content: center !important;
 border-radius: 10px;
 }
 
+
 .btn {
 background: #943e08;
 color: white;
 border: none;
 }
 
- .btn:hover {
+.btn:hover {
 background: black;
 }
 
 .btn a {
 font-family: 'Montserrat', sans-serif;
+}
+
+.backButton {
+    margin-left: 50px;
 }
 
 ul {

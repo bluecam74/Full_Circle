@@ -3,7 +3,9 @@
 
 <div class="background-transactions">
 
-    <br><br><br><br>
+    <br><br>
+    <a class="btn btn-primary backButton" href="../index" role="button">Back</a>
+    <br><br>
     <!--Sorry I had to use it I tried padding and margin and it would distort my background :( -->
 
     <!--Content Starts Here-->
@@ -45,14 +47,13 @@
             </div>
             <div class="col-sm-12 col-md-6">
                 <h3 class="appRequests">Approved Requests</h3>
-                <div class="listappreq">
+                <div class="listappreq text-left">
                      {{#each transactions}}
                         {{#if this.approved}}
                             <ul>
-                                <li>
-                                    <button disabled class="btn btn-mustard devoured">{{amount}}</button>
-                                    <span class="badge badge-pill badge-light btn-lettuce">Eaten by {{Customer.Name}}!</span>
-                                </li>
+                                <li>Voucher ID: {{voucherNum}}</li>
+                                <li>Amount Requested: {{amount}}</li>
+                                <li>Date Created: {{createdAt}}</li>
                             </ul>
                         {{/if}}
                     {{/each}}
