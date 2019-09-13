@@ -1,0 +1,50 @@
+.create .create-background {
+    background-image: url(../images/dark_greenleaf.jpg);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+.create .createTitle {
+    margin: 10px auto 20px auto;
+}
+
+.create .create-form {
+    background: rgb(255, 255, 255, 0.8) !important;
+    padding: 20px;
+}
+
+  .create .form-group {
+    text-align: center;
+    width: 100%;
+  }
+  .create .btn-primary {
+    color: black;
+    background-color: white;
+    border-color: white;
+    width: 100%;
+  }
+  .create .btn-primary:hover {
+    background-color: rgb(53, 105, 53);
+    border-color: rgb(53, 105, 53);
+  }
+  .create .btn-primary:active {
+    background-color: rgb(86, 139, 86);
+    border-color: rgb(86, 139, 86);
+  }
+
+  .create input{
+      margin: 10px 0;
+  }
+
+  .create #create-submit {
+      width: 30%;
+      color: white;
+  }
+
+  .create  #create-submit:hover, #create-submit:focus {
+    background: black !important;
+    }
+

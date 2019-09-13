@@ -1,0 +1,225 @@
+<!--Navigation Bar-->
+<div class="dashboard">
+  <!--Image Parallax Header-->
+  <div class="parallax-window" data-parallax="scroll" data-image-src="images/person_forest.jpg">
+    <nav class="navigation">
+      <ul>
+        <li class="dashboardli"><a href="/logout">Log Out</a></li>
+        {{!-- <li><a href="/user-profile">Profile </a>|</li>
+        <li><a href="#">Dashboard </a>|</li> --}}
+        <hr class="navHR">
+      </ul>
+    </nav>
+    <div class="row">
+      <div class="col-sm-6 col-md-6 greeting">
+        <h3 class="member-hello">Hello <span class="member-name"></span>!</h3>
+      </div>
+    </div>
+    <h3 class="headWelcome">Welcome to</h3>
+    <!-- <p class="member-name"></p> -->
+    <h1 class="headFC">Full Circle</h1>
+  </div>
+  <!--Dashboard Section/Welcome Section-->
+  <div class="container-fluid padding">
+    <div class="row welcome text-center">
+      <div class="col-12">
+        <h1 class="display-4">User Dashboard</h1>
+      </div>
+      <hr>
+      <div class="col-12">
+        <p class="lead">
+          You are able to edit/view your account here. If you want to see your past transactions or the
+          current money you have in your account view the Transaction image. Lastly, click on the wizard
+          hat to see how much points and bottles you have recycled so far!
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--Three Column Section-->
+  <div class="container-fluid padding">
+    <div class="row text-center padding">
+       <div class="col-xs-12 col-sm-6 col-md-4">
+        <a href="/user-profile"><i class="fa fa-user fa-4x hov"></i></a>
+        <h3 class="icon-label">Your Profile</h3>
+        <p>View your user information.</p>
+      </div>
+      {{!-- <div class="col-xs-12 col-sm-6 col-md-4">
+        <a href="kiosk"><i class="fas fa-tools fa-4x hov"></i></a>
+        <h3>Kiosk</h3>
+        <p>View pending/approved transaction for admin only.</p>
+      </div> --}}
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <a href="transactions"><i class="far fa-money-bill-alt fa-4x"></i></a>
+        <h3 class="icon-label">Transactions</h3>
+        <p>Request/view pending or past transactions.</p>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <a href="wizard"><i class="fas fa-hat-wizard fa-4x"></i></a>
+        <h3 class="icon-label">Recycle Wizard</h3>
+        <p>View what level of recycler you are at.</p>
+      </div>
+
+    </div>
+    <hr class="my-4">
+  </div>
+  <!--Jumbotron-->
+  <!-- <div class="container-fluid">
+            <div class="row jumbotron">
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+                    <p class="lead">Want to submit a rating for one of these recycle centers? Click on the button and start
+                        giving out your reviews and tell us what you think. Let others know which ones are the best ones to go to 
+                        during your avocado toast break. Thank you!
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+                    <a href="#"><button type="button" class="btn btn-outline-secondary btn-md">Start Rating Here</button></a>
+                </div>
+            </div>
+        </div> -->
+  <!--Image Parallax 2-->
+  <div class="parallax-window-2" data-parallax="scroll" data-image-src="images/bottle_hand.jpg"></div>
+  <!--Search/Ratings Section/Two Column Section-->
+  <div class="container-fluid padding mapping">
+    <div class="row dashboard1 text-center">
+      <div class="col-md-12">
+        <h1 class="display-4">Bottle Recycle Finder</h1>
+        <hr class="rating-hr">
+      </div>
+      <div class="input-group mb-3 padding">
+        <input type="text" class="form-control" id="input-locate" placeholder="Recycle"
+          aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        {{!-- <p>Click the button bellow to use your device's GPS location to find a recycle center near you!</p> --}}
+        <div id="map" style="width: 100%; height: 400px; background: grey"></div>
+        <div id="panel"></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-4">
+
+  <!--Parallax 3-->
+  <div class="parallax-window-3" data-parallax="scroll" data-image-src="images/deer_peekaboo.jpg"></div>
+  <!--Badges and Points/Two Column Section-->
+  <div class="container-fluid padding">
+    <div class="row padding text-center justify-content-center">
+      <div class="col-lg-10 about">
+        <h2>About the Company</h2>
+        <hr class="my-4">
+        <div class="about">
+          <p>Full Circle was founded in 2017 after the realization that retrieving money from recycle
+            was a hassle and this was deterring many people from completing the task. </p>
+          <p>In hopes in creating a society with an ingrained sense of environmental wellbeing,
+            we are making recycling not only a feel-good concept, but a convenient one. </p>
+          <p>As we continue to seek improvements for our application and your experience, we look
+            forward to helping both you and future generations enjoy a green, happy earth.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <hr class="my-4">
+  <!--Parallax 4-->
+  <div class="parallax-window-4" data-parallax="scroll" data-image-src="images/girl_mountain.jpg"></div>
+  <!--Meet the Team-->
+  <div class="container-fluid padding">
+    <div class="row welcome text-center">
+      <div class="col-12">
+        <h1 class="display-4">Meet the Team</h1>
+      </div>
+      <hr>
+    </div>
+  </div>
+  <!--Cards For Meet the Team-->
+  <div class="container-fluid padding">
+    <div class="row padding">
+      <div class="col-md-3 bio-cont">
+        <div class="card bio">
+          <img class="card-img-top" src="images/Jacob.jpg">
+          <div class="card-body">
+            <h4 class="card-title">Jacob</h4>
+            <div class="row card-info">
+              <p class="card-text">Jacob enjoys snowboarding, hiking, being outdoors, and the occasional gaming sesh.
+              </p>
+            </div>
+            <div class="row github-link">
+              <a href="https://github.com/jcasas5253" target="_blank" class="btn btn-outline-secondary">See GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 bio-cont">
+        <div class="card bio">
+          <img class="card-img-top" src="images/RE_Prof_Pic.jpg">
+          <div class="card-body">
+            <h4 class="card-title">Malak</h4>
+            <div class="row card-info">
+              <p class="card-text">Malak was born and raised in Orange County.
+                In her free time, she likes to surf, snowboard, and take long drives.
+              </p>
+            </div>
+            <div class="row github-link">
+              <a href="https://github.com/bluecam74" target="_blank" class="btn btn-outline-secondary">See GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 bio-cont">
+        <div class="card bio">
+          <img class="card-img-top" src="images/mario_prof.jpg">
+          <div class="card-body">
+            <h4 class="card-title">Mario</h4>
+            <div class="row card-info">
+              <p class="card-text">Mario is a California native who loves motorcycles and fluffy animals.
+                He is known to be super chill.
+              </p>
+            </div>
+            <div class="row github-link">
+              <a href="https://github.com/mmthree" target="_blank" class="btn btn-outline-secondary">See GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 bio-cont">
+        <div class="card bio">
+          <img class="card-img-top" src="images/Image from iOS.jpg">
+          <div class="card-body">
+            <h4 class="card-title">Rachel</h4>
+            <div class="row card-info">
+              <p class="card-text">Rachel likes to watch anime in her free time and collect memes.
+                She also likes visiting trending restaurants and spending a night out on the town. </p>
+            </div>
+            <div class="row github-link">
+              <a href="https://github.com/rachbaut" target="_blank" class="btn btn-outline-secondary">See GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Footer-->
+  <footer>
+    <div class="container-fluid">
+      <div class="row text-center">
+        <div class="col-12">
+          <h2>Connect With Us</h2>
+        </div>
+        <div class="col-12 social">
+          <hr class="footerHR">
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
+          <a href="https://plus.google.com" target="_blank"><i class="fab fa-google-plus-g fa-3x"></i></a>
+          <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
+          <a href="https://www.github.com" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="./parallax.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

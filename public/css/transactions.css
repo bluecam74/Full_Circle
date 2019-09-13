@@ -1,16 +1,15 @@
 /*styles for the background image*/
 .transac .background-transactions {
-    background-image: url(../images/bottle_hand.jpg);
+    background-image: url(../images/eriks-abzinovs.jpg);
     background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat;
-    height: 100vh;
     width: 100%;
 }
 .transac .row {
 margin-right: 0px !important;
 margin-left: 0px !important;
 }
+
 /*styles for logo*/
 .transac-logo {
 margin-left: 20px;
@@ -32,7 +31,7 @@ align-content: center !important;
 .transac .contback {
 width: 75%;
 font-family: 'Montserrat', sans-serif;
-background: rgb(255, 255, 255, 0.5) !important;
+background: rgb(255, 255, 255, 0.8) !important;
 text-align: center;
 justify-content: center !important;
 border-radius: 10px;
@@ -45,12 +44,31 @@ border: none;
 .transac .btn:hover {
 background: black;
 }
-.transac .btn a {
+/* .transac .btn a {
 font-family: 'Montserrat', sans-serif;
+} */
+
+.transac .back-btn {
+    background-color: rgba(0, 0, 0, 0.945);
+    float: left;
+}
+
+.transac .ListRequestsTitle {
+    margin-bottom: 30px;
 }
 ul {
 list-style: none;
 }
+
+.transaction-block {
+    background: rgb(255, 255, 255, 0.7) !important;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 10px 0;
+    padding: 10px;
+    font-weight: 700;
+}
+
 .form-group {
 width: 50%;
 margin: 0 auto;

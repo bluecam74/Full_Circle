@@ -1,0 +1,107 @@
+/*styles for the background image*/
+.wizard .background-profile {
+    background-image: url(../images/angel-leon-271147-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+.wizard .row {
+margin-right: 0px !important;
+margin-left: 0px !important;
+}
+
+.wizard .fa-tree {
+    color: green;
+}
+
+.wizard .fa-pagelines {
+    color: rgb(189, 137, 24);
+}
+
+.wizard .fa-leaf {
+    color: rgb(33, 54, 124);
+}
+
+/*styles for logo*/
+.wizard-logo {
+margin-left: 20px;
+margin-top: 20px;
+}
+/*styles for content*/
+.wizard .header {
+font-family: 'Special Elite', cursive;
+font-size: 3rem;
+padding-bottom: 3px;
+padding-top: 25px;
+}
+.paymline {
+border: 1
+}
+.wizard .container {
+align-content: center !important;
+
+}
+.wizard .contback {
+width: 75%;
+height: 75%;
+font-family: 'Montserrat', sans-serif;
+background: rgb(255, 255, 255, 0.8) !important;
+text-align: center;
+justify-content: center !important;
+border-radius: 10px;
+
+}
+.wizard .btn {
+background: #943e08;
+color: white;
+border: none;
+}
+.wizard .btn:hover {
+background: black;
+}
+/* .wizard .btn a {
+font-family: 'Montserrat', sans-serif;
+} */
+
+.wizard .back-btn {
+    background-color: rgba(0, 0, 0, 0.945);
+    float: left;
+}
+
+.wizard .info-row {
+    justify-content: center;
+    margin: 100px 0;
+}
+
+.wizard .point-desc {
+    font-weight: 700;
+}
+ul {
+    list-style: none;
+}
+
+.wizard .info-block {
+    background: rgb(255, 255, 255, 0.7) !important;
+    border: 1px solid black;
+    margin: 10px 0;
+    padding: 30px;
+    font-weight: 700;
+    text-align: left;
+    font-size: 20px;
+}
+
+/* .form-group {
+width: 50%;
+margin: 0 auto;
+}
+.requests {
+padding-top: 30px;
+padding-bottom: 55px;
+}
+/*text styles for content hr*/
+/* .line {
+border: solid 1px black;
+}  */

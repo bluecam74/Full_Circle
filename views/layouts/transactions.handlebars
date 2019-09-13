@@ -1,0 +1,92 @@
+<div class="transac">
+
+    <!--Setting the Image for the background-->
+    <div class="background-transactions">
+
+        <br><br><br><br>
+
+        <!--Content Starts Here-->
+
+        <!--Reimburesment form-->
+        <div class="container-fluid contback">
+            <div class="row text-center">
+                <div class="col-12 back-button">
+                    <button class="back-btn btn my-3">Back</button>
+                </div>
+                <div class="col-12">
+                    <h1 class="header">Transactions and Payments</h1>
+                    <hr class="paymline">
+                    <h2 class="infoheader">Please submit a reimbursement request.</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="amount">Amount:</label>
+                            <input type="text" class="form-control mb-3" id="amount" aria-describedby="amountHelp"
+                                placeholder="Enter Amount">
+                        </div>
+                        <div class="form-group">
+                            <label for="voucherNum">Voucher # (from receipt):</label>
+                            <input type="text" class="form-control mb-3" id="voucherNum" aria-describedby="voucherHelp"
+                                placeholder="Enter the Voucher Number found on your receipt">
+                        </div>
+                        <button type="submit" class="submit-request btn my-3">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row requests">
+                <div class="col-sm-12 col-md-6">
+                    <h3 class="ListRequestsTitle">Pending Requests</h3>
+                    <div class="listpendreq">
+                        <ul>
+                            {{#each transactions}}
+                                {{#unless approved}}
+                                {{#unless this.denied}}
+                                    <div class="transaction-block">
+                                        <p class="show-voucher">Voucher ID: {{voucherNum}}</p>
+                                        <p class="show-amount">Amount: ${{amount}}</p>
+                                        <p class="show-created">Date Created: {{createdAt}}</p>
+                                    </div>
+                                {{/unless}}
+                                {{/unless}}
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <h3 class="ListRequestsTitle">Approved Requests</h3>
+                    <div class="listappreq">
+                        <ul>
+                            {{#each transactions}}
+                                {{#if approved}}
+                                    <div class="transaction-block">
+                                        <p class="show-voucher">Voucher ID: {{voucherNum}}</p>
+                                        <p class="show-amount">Amount: ${{amount}}</p>
+                                        <p class="show-created">Date Approved: {{updatedAt}}</p>
+                                    </div>
+                                {{/if}}
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-contents-center">
+                 <div class="col-sm-12 col-md-6">
+                    <h3 class="ListRequestsTitle">Denied Requests</h3>
+                    <div class="listappreq">
+                        <ul>
+                            {{#each transactions}}
+                                {{#if denied}}
+                                    <div class="transaction-block">
+                                        <p class="show-voucher">Voucher ID: {{voucherNum}}</p>
+                                        <p class="show-amount">Amount: ${{amount}}</p>
+                                        <p class="show-created">Date Denied: {{updatedAt}}</p>
+                                        <p class="show-reason">Reason Denied: {{deniedReason}}</p>
+                                    </div>
+                                {{/if}}
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

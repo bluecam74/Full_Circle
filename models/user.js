@@ -17,6 +17,17 @@ module.exports = function(sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING,
       allowNull: false
+    }, 
+    fname: DataTypes.STRING,
+    lname: DataTypes.STRING,
+    zip: DataTypes.STRING,
+    admin: {
+      type: DataTypes.BOOLEAN, 
+      defaultValue: 0
+    },
+    points: {
+      type: DataTypes.INTEGER, 
+      defaultValue: 0
     }
   }, {
     freezeTableName: true
@@ -27,7 +38,7 @@ module.exports = function(sequelize, DataTypes) {
   };
   // Hooks are automatic methods that run during various phases of the User Model lifecycle
   // In this case, before a User is created, we will automatically hash their password
-  User.hook("beforeCreate", function(user) {
+  User.beforeCreate(function(user) {
     user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
   });
   return User;

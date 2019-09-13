@@ -5,11 +5,11 @@
  */
 
 /* Links */
-.home a,
+/* .home a,
 a:focus,
 a:hover {
   color: #fff;
-}
+} */
 
 /* Custom default button */
 .home .btn-secondary,
@@ -33,7 +33,7 @@ body {
 }
 
 .home-background-image {
-    background-image: url(../images/dark_greenleaf.jpg);
+    background-image: url(../images/dark_greenleaf_drk.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -49,7 +49,7 @@ body {
 }
 
 .home .cover-container {
-  max-width: 42em;
+  max-width: 80%;
 }
 
 
@@ -94,19 +94,30 @@ body {
   border-bottom-color: #943e08;
 }
 
+
 .home #login {
-    background-color: #943e08
+    background-color: #943e08;
+    color: white;
+    
+}
+.home .login {
+  margin: 10px 0 60px 0;
+  
 }
 
 .home #signup {
-    background-color: #943e08
+    background-color: #943e08;
+    color: white;
+}
+
+.home .signup {
+  margin: 50px;
 }
 
 .home #leadbutton {
         margin: 0 auto;
         text-align: center;
 }
-
 @media (min-width: 48em) {
   .home .masthead-brand {
     float: left;
@@ -135,6 +146,7 @@ body {
  * Footer
  */
  .home .mastfoot {
+  padding-top: 100px;
   color:white;
 }
 
@@ -145,36 +157,15 @@ body {
 
 /*forms*/
 
-.home .form-control {
-    width: 50% !important;
-    margin: 0 auto !important;
+.home .form-group {
+    width: 90% !important;
+    margin: 20px auto !important;
 }
 
-/* CREATE PAGE */
-.create-background {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
+.home .new-signup {
+  padding-top: 200px;
 }
-.create .form-group {
-  text-align: center;
-  width: 100%;
-}
-.create .btn-primary {
-  color: black;
-  background-color: white;
-  border-color: white;
-  width: 100%;
-}
-.create .btn-primary:hover {
-  background-color: rgb(53, 105, 53);
-  border-color: rgb(53, 105, 53);
-}
-.create .btn-primary:active {
-  background-color: rgb(86, 139, 86);
-  border-color: rgb(86, 139, 86);
-}
-/* CREATE PAGE */
+
 /* FAQ */
 .faq-background {
   position: absolute;
@@ -192,17 +183,17 @@ body {
 }
 /* FAQ */
 
-/*profile */
+/*dashboard */
 
-.profile html, body {
+.dashboard html, body {
   height: 100%;
   width: 100%;
   font-family: 'Montserrat', sans-serif;
-  background-color: #d4d4a4;
+  background-color: white;
 }
 
 /*navigation styles*/
-.profile .navbar {
+.dashboard .navbar {
   background-color: #514f3f;
   color: white;
   font-size: 15px;
@@ -213,60 +204,56 @@ body {
 }
 
 /* carousel styles */
-.profile .carousel-inner img {
+.dashboard .carousel-inner img {
   width: 100%;
   height: 100%;
 }
 
-.profile .carousel-caption {
+.dashboard .carousel-caption {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.profile .carousel-caption h1 {
+.dashboard .carousel-caption h1 {
   font-size: 75px;
   text-transform: uppercase;
   font-family: 'Inconsolata', cursive;
   text-shadow: 1px 1px 1px 15px #fff;
 }
 
-.profile .carousel-caption h3 {
+.dashboard .carousel-caption h3 {
   font-size: 40px;
   text-shadow: 1px 1px 1px 10px #fff;
   padding-bottom: 10px;
 }
 
 /* buttons */
-.profile .btn-primary {
+.dashboard .btn-primary {
   background-color: #943e08 !important;
   border: 1px solid #943e08 !important;
 }
 
-.profile .btn-primary:hover {
+.dashboard .btn-primary:hover {
   background-color: white;
   color: black;
   border: 1px solid black;
 }
 
-/* .jumbotron {
-  padding: 1rem !important;
-  border-radius: 0 !important;
-} */
 
 /*dashboard styles*/
-.profile .padding {
+.dashboard .padding {
   padding-top: 35px;
   padding-bottom: 40px;
 }
 
-.profile .welcome {
+.dashboard .welcome {
   width: 75%;
   padding-top: 85px;
   margin: 0 auto !important;
 }
 
-.profile .welcome hr {
+.dashboard .welcome hr {
   border-top: 2px solid #514f3f;
   width: 95%;
   margin-top: .3rem;
@@ -274,43 +261,43 @@ body {
 }
 
 /* fontawesome icons */
-.profile .fa-user-circle {
+.dashboard .fa-user-circle {
   color: #943e08 ;
 }
 
-.profile .fa-money-bill-alt {
+.dashboard .fa-money-bill-alt {
   color: #678726;
 }
 
-.profile .fa-hat-wizard {
+.dashboard .fa-hat-wizard {
   color: #1e407c;
 }
 
 /* search and rate page */
 
-.profile .dashboard {
+.dashboard .dashboard1 {
   width: 75%;
   padding-top: 85px;
   margin: 0 auto !important;
 }
 
-.profile .dashboard hr {
+.dashboard .dashboard hr {
   border-top: 2px solid #514f3f;
   width: 95%;
   margin-top: .3rem;
   margin-bottom: 1rem;
 }
 
-.profile .input-group {
+.dashboard .input-group {
   width: 70% !important;
   margin: 0 auto !important;
 }
 
-.profile .input-group-append {
+.dashboard .input-group-append {
   background-color:#943e08;
 }
 
-.profile #button-addon2 {
+.dashboard #button-addon2 {
   color: white;
 }
 /*
@@ -330,4 +317,6 @@ Extra Large {xl} devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
 */
 
-/*profile */
+/*dashboard */
+
+/*login*/

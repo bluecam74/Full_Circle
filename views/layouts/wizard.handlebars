@@ -1,0 +1,52 @@
+<div class="wizard">
+
+  <!--Setting the Image for the background-->
+  <div class="background-profile">
+
+    <br><br><br><br>
+
+    <!--Content Starts Here-->
+
+    <!--Reimburesment form-->
+    <div class="container-fluid contback">
+      <div class="row text-center">
+        <div class="col-12 back-button">
+          <button class="back-btn btn my-3">Back</button>
+        </div>
+        <div class="col-12">
+          <h1 class="header">Your Points</h1>
+          <hr class="paymline">
+              <div class="row text-center padding">
+       <div class="col-xs-12 col-sm-6 col-md-4">
+        <i class="fa fa-tree fa-4x hov"></i>
+        <h3>Top Tree</h3>
+        <p class="point-desc">500,000 + Points</p>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <i class="fab fa-pagelines fa-4x"></i>
+        <h3>Strong Native Plant</h3>
+        <p class="point-desc">200,000 - 499,999 Points</p>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <i class="fa fa-leaf fa-4x"></i>
+        <h3>Promising Leaf</h3>
+        <p class="point-desc">1-199,999 Points</p>
+      </div>
+
+    </div>
+          <div class="row info-row">
+            <div class="col-8">
+              <ul>
+                {{#each user}}
+                  <div class="info-block text-center">
+                    <p class="info-points">You Currently Have {{points}} Points.</p>
+                  </div>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

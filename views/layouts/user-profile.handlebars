@@ -1,0 +1,37 @@
+<div class="user-profile">
+
+  <!--Setting the Image for the background-->
+  <div class="background-profile">
+
+    <br><br><br><br>
+
+    <!--Content Starts Here-->
+
+    <!--Reimburesment form-->
+    <div class="container-fluid contback">
+      <div class="row text-center">
+        <div class="col-12 back-button">
+          <button class="back-btn btn my-3">Back</button>
+        </div>
+        <div class="col-12">
+          <h1 class="header">Your Profile</h1>
+          <hr class="paymline">
+          <div class="row info-row">
+            <div class="col-8">
+              <ul>
+                {{#each user}}
+                  <div class="info-block">
+                    <p class="info-name">Name: {{fname}} {{lname}}</p>
+                    <p class="info-email">Email: {{email}}</p>
+                    <p class="info-zip">Zip Code: {{zip}}</p>
+                    <p class="info-points">Current Points: {{points}}</p>
+                  </div>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

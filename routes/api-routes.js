@@ -6,11 +6,12 @@ module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
+
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
     // Since we're doing a POST with javascript, we can't actually redirect that post into a GET request
     // So we're sending the user back the route to the members page because the redirect will happen on the front end
     // They won't get this or even be able to access this page if they aren't authed
-    res.json("/members");
+    res.json("/index");
   });
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
@@ -20,12 +21,15 @@ module.exports = function(app) {
     console.log("signup post");
     db.User.create({
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password, 
+      fname: req.body.fname, 
+      lname: req.body.lname, 
+      zip: req.body.zip
     }).then(function() {
       res.redirect(307, "/api/login");
     }).catch(function(err) {
       console.log(err);
-      res.json(err);
+      // res.json(err);
       // res.status(422).json(err.errors[0].message);
     });
   });
@@ -47,30 +51,145 @@ module.exports = function(app) {
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
         email: req.user.email,
-        id: req.user.id
+        id: req.user.id, 
+        fname: req.user.fname,
+        admin: req.user.admin, 
+        points: req.user.points
       });
     }
   });
 
-  app.post("/api/transactions", function(req, res) {
-    console.log(req.body);
-    if(!req.body.userId || !req.body.amount) {
-        return res.status(400).json({msg: new Error("Please put all data on body")});
-    }
-    var pending = {
-        userId: req.body.userId,
-        amount: req.body.amount,
-        voucherNum: req.body.voucherNum
-    };
+  app.put("/api/user_data", function(req, res) {
+    db.User.update(req.user,
+      {
+        where: {
+          id: req.user.id
+        }
+    }).then(function(dbUser){
+      console.log(req.user);
+        res.json(dbUser);
+    });
+  });
 
-    db.Pending.create(pending)
-    .then(function(resp) {
-        res.status(201).json({msg: "Pending Request Created"})
+  app.post("/api/register",function(req,res){
+    db.UserInfo.create({
+      fname: req.body.fname, 
+      lname: req.body.lname,
+      email: req.user.email, 
+      userId: req.user.id, 
+      zip: req.body.zip
+  }).then(function(dbUserInfo){
+      console.log(req.body);
+      res.json(dbUserInfo);
+  });
+});
+
+app.get("/api/transactions/:id",function(req,res){
+  db.Transactions.findOne({
+    where: {
+      id: req.params.id
+    }
+ }).then(function(dbTransactions){
+    //  console.log("api trans read: ", res);
+     res.json(dbTransactions);
+ });
+});
+
+  app.get("/api/transactions",function(req,res){
+    db.Transactions.findAll({})
+    .then(function(dbTransactions){
+      res.json(dbTransactions);
+  });
+  });
+
+  app.get("/api/transactions/:id",function(req,res){
+    db.Transactions.findOne(req.body, 
+      {
+        where: {
+          id: req.params.id
+        }
+      })
+    .then(function(dbTransactions){
+      res.json(dbTransactions);
+    });
+  });
+
+  
+
+  app.post("/transactions/create",function(req,res){
+    db.Transactions.create({
+      amount: req.body.amount, 
+      voucherNum: req.body.voucherNum,
+      createdAt: req.body.createdAt, 
+      userId: req.user.id
+  }).then(function(dbTransactions){
+      console.log("api trans create: ", req.body);
+      res.json(dbTransactions);
+  });
+});
+
+app.post("/points/create",function(req,res){
+  db.Points.create({
+    userId: req.user.id,
+    email: req.body.email, 
+    fname: req.body.fname,
+    lname: req.body.lname,
+    zip: req.body.zip,
+    createdAt: req.body.createdAt, 
+    
+}).then(function(dbPoints){
+    console.log("api points create: ", req.body);
+    res.json(dbPoints);
+});
+});
+
+
+
+app.put("/update/kiosk/:id",function(req,res){
+  db.Transactions.update(req.body,
+    {
+      where: {
+        id: req.params.id
+      }
+  }).then(function(dbTransactions){
+    console.log(req.body);
+      res.json(dbTransactions);
+  });
+  });
+
+  app.put("/update/points/:id",function(req,res){
+    db.User.update(req.body,
+      {
+        where: {
+          id: req.params.id
+        }
+    }
+    ).then(function(dbUser){
+      console.log("update put points with id: ", req.params.id);
+        res.json(dbUser);
+    });
+    });
+
+    app.get("/update/points/",function(req,res){
+      db.User.findAll()
+      .then(function(dbUser){
+        console.log("update get points with id: ", req.body);
+        res.json(dbUser);
+      });
+      });
+
+
+app.get("/update/points/:id",function(req,res){
+  db.User.findOne( 
+    {
+      where: {
+        id: req.params.id
+      }
     })
-    .catch(function(err) {
-        res.status(400).json({msg: err.toString()});
-    })
-})
+  .then(function(dbUser){
+    res.json(dbUser);
+  });
+  });
 
 
 };

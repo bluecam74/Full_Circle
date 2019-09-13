@@ -1,0 +1,113 @@
+<!--Reimburesment form-->
+<div class="kiosk">
+    <div class="background-profile">
+
+        <br><br><br><br>
+
+        <div class="container-fluid kioskback">
+            <div class="row text-center">
+                <div class="col-12 back-button">
+                    <button class="back-btn btn my-3">Back</button>
+                </div>
+                <div class="col-12">
+                    <h1 class="header">Kiosk Dashboard</h1>
+                    <hr class="paymline">
+                </div>
+            </div>
+
+            <div class="row">
+                <!--Pending Requests-->
+                <div class="row">
+                    <h2 class="reqheader col-sm-12 col-md-12">Pending Requests</h2>
+                    <div class="col-sm-10 col-md-10">
+                        <div class="approvals px-md-4 py-3">
+                            {{#each transactions}}
+                            {{#unless this.approved}}
+                            {{#unless this.denied}}
+
+                            <form class="kiosk-block my-3">
+                                <ul>
+
+                                    <div class="row req-divs">
+                                        <div class="user-disp">User: {{userId}}</div>
+                                        <div class="transac-disp">Transaction ID: {{id}}</div>
+                                    </div>
+
+                                    <div class="row req-divs">Voucher ID: {{voucherNum}}</div>
+                                    <div class="row req-divs">Amount Requested: ${{amount}}</div>
+                                    <div class="row req-divs">Date Created: {{createdAt}}</div>
+
+                                </ul>
+                                <div class="form-group denial">
+                                    <input type="text" class="form-control" id="denialReason" aria-describedby="Help"
+                                        placeholder="Enter reason if request denied">
+                                </div>
+                                <div class="button-div">
+                                    <button class="btn btn-primary" data-id="{{id}}" id="approve"
+                                        type="submit">Approve</button>
+                                    <button class="btn btn-primary" data-id="{{id}}" id="deny"
+                                        type="submit">Deny</button>
+                                </div>
+                            </form>
+                            {{/unless}}
+                            {{/unless}}
+                            {{/each}}
+                        </div>
+                    </div>
+                   {{!-- <hr class="paymline"> --}}
+                    <!--Approved Requests-->
+                    <div class="row px-md-5 compReqs">
+                        <h2 class="reqheader paymline col-sm-12 col-md-12">Approved Requests</h2>
+                        <div class="col-sm-10 col-md-10">
+                            <div class="approvals">
+                                {{#each transactions}}
+                                {{#if this.approved}}
+                                <ul class="kiosk-block">
+
+                                    <div class="row req-divs">
+                                        <div class="user-disp">User: {{userId}}</div>
+                                        <div class="transac-disp">Transaction ID: {{id}}</div>
+                                    </div>
+
+                                    <div class="row req-divs">Voucher ID: {{voucherNum}}</div>
+                                    <div class="row req-divs">Amount Requested: ${{amount}}</div>
+                                    <div class="row req-divs">Date Approved: {{updatedAt}}</div>
+
+                                </ul>
+                                {{!-- <hr class="reqline"> --}}
+                                {{/if}}
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                    <!--Denied Requests-->
+                    <div class="row px-md-5 compReqs">
+                        <h2 class="reqheader paymline col-sm-12 col-md-12">Denied Requests</h2>
+                        <div class="col-sm-10 col-md-10">
+                            <div class="approvals">
+                                {{#each transactions}}
+                                {{#if this.denied}}
+                                <ul class="kiosk-block">
+
+                                    <div class="row req-divs">
+                                        <div class="user-disp">User: {{userId}}</div>
+                                        <div class="transac-disp">Transaction ID: {{id}}</div>
+                                    </div>
+
+                                    <div class="row req-divs">Voucher ID: {{voucherNum}}</div>
+                                    <div class="row req-divs">Amount Requested: ${{amount}}</div>
+                                    <div class="row req-divs">Date Denied: {{updatedAt}}</div>
+                                    <div class="row req-divs">Reason Denied: {{deniedReason}}</div>
+
+                                </ul>
+                                {{/if}}
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
