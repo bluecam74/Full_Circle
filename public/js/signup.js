@@ -27,7 +27,6 @@ $(document).ready(function () {
     // If we have an email and password, run the signUpUser function
     signUpUser(userData.email, userData.password, userData.fname, userData.lname, userData.zip);
     console.log(userData.id);
-    createPoints(userData.email, userData.fname, userData.lname, userData.zip);
     emailInput.val("");
     passwordInput.val("");
   });
@@ -48,26 +47,6 @@ $(document).ready(function () {
     }).catch(handleLoginErr);
     window.location.assign("/index");
   }
-  function createPoints(email, fname, lname, zip) {
-    $.get("/api/user_data").then(function (data) {
-      console.log(data);
-      var id = data.id;
-      console.log("create points ",id);
-      axios.post("/points/create", {
-        userId: id,
-        email: email,
-        fname: fname,
-        lname: lname,
-        zip: zip
-      }).then(function (data) {
-        window.location.replace(data);
-        // If there's an error, handle it by throwing up a bootstrap alert
-      }).catch(handleLoginErr);
-      window.setTimeout(function () {
-        window.location.assign("/index")
-    }, 200000)
-    })
-}
 
 
   function handleLoginErr(err) {
