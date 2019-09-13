@@ -6,7 +6,7 @@ $(document).ready(function () {
   }
 
   var platform = new H.service.Platform({
-    apikey: "Moi4X7VlIvLI1SynF_Mepc_P5rhj2Ap6TaHGerSQ2NY"
+    apikey: ****
   });
   var defaultLayers = platform.createDefaultLayers();
 
