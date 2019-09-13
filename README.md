@@ -1,4 +1,4 @@
-<p align="center"><img src="./public/images/fc_home_preview.png" alt="Full Circle Preview" width="650"></p>
+<p align="center"><img src="./public/images/Full_circle_1.png" alt="Full Circle 1 Preview" width="650"></p>
 
 ## About Us
 
@@ -16,6 +16,25 @@ In hopes in creating a society with an ingrained sense of environmental wellbein
 * You will receive a receipt with a voucher number 
 * Enter your voucher number and the total dollar amount you are owed on the "Transactions" page
 * Once our system verifies your information, a payment will be sent to your Paypal account
+
+
+## How To Try It
+
+Login using one of these customer users: 
+
+* savyrecycler@gmail.com    password: 123456
+* ginger9090@gmail.com      password: 123456
+* jessica@gmail.com         password: 123456
+
+Kiosk Login:
+
+* kiosk@gmail.com         password: 123456
+
+Submit transactions and see them post in different areas according to pending, approved, or denied. Only each user can see their own.
+
+Recycle Wizard shows how many points the user accumulated. 
+
+<p align="center"><img src="./public/images/Full_circle_2.png" alt="Full Circle 2 Preview" width="650"></p>
 
 ## Technologies Used
 
