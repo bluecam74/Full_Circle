@@ -79,7 +79,7 @@ $(document).ready(function() {
             .then(function (resp) {
                 window.setTimeout(function () {
                     window.location.assign("/kiosk")
-                }, 200000)
+                }, 200)
             })
             .catch(function (err) {
                 console.error(err);
