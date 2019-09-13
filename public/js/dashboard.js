@@ -288,8 +288,8 @@ $(document).ready(function () {
   //   // var secretcode = config.app_code;
   //   // 1. initialize platform
   //   var platform = new H.service.Platform({
-  //     app_id: 'ZHnvyXxejU8ydcgPz4mt',
-  //     app_code: '9-fkxqSTPfkivp_B8KuJcA',
+  //     app_id: '***',
+  //     app_code: '***',
   //     useHTTPS: true,
   //     useCIT: true
   //   });
