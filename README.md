@@ -4,8 +4,7 @@
 #### Deployed Link:
 * https://full-circle-19.herokuapp.com
 
-
-
+<br />
 
 <p align="center"><img src="./public/images/Full_circle_1.png" alt="Full Circle 1 Preview" width="650"></p>
 
