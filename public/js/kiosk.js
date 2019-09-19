@@ -2,7 +2,7 @@ $(document).ready(function() {
   
 
   
-  $("#approve").on("click", function (e) {
+  $(".approve").on("click", function (e) {
     e.preventDefault();
     e.stopPropagation();
     var id = $(this).data("id");
@@ -62,7 +62,7 @@ $(document).ready(function() {
   }
   
 
-    $("#deny").on("click", function (e) {
+    $(".deny").on("click", function (e) {
       e.preventDefault();
       var id = $(this).data("id");
       var denialReason = $("#denialReason").val().trim();
