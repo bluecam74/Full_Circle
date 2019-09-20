@@ -300,6 +300,12 @@ body {
 .dashboard #button-addon2 {
   color: white;
 }
+
+.error_page .back-home {
+  color: black;
+  border: black 1px solid;
+  padding: 8px;
+}
 /*
 Extra Small {xs} devices (portrait phones, less than 576px)
 No Media query since this is the default in Bootstrap

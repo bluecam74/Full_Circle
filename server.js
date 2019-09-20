@@ -28,6 +28,7 @@ app.use(passport.session());
 // app.use("/api", apiRoutes);
 // app.use(htmlRoutes);
 
+
 // Requiring our routes
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
@@ -39,6 +40,26 @@ app.engine(
   })
 );
 app.set("view engine", "handlebars");
+
+
+app.use(function(req, res, next){
+  res.status(404);
+
+  // respond with html page
+  if (req.accepts('html')) {
+    res.render('layouts/404', { url: req.url });
+    return;
+  }
+
+  // respond with json
+  if (req.accepts('json')) {
+    res.send({ error: 'Not found' });
+    return;
+  }
+
+  // default to plain-text. send()
+  res.type('txt').send('Not found');
+});
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(function() {
