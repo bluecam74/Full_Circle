@@ -18,7 +18,6 @@ module.exports = function(app) {
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
   app.post("/api/signup", function(req, res) {
-    console.log("signup post");
     db.User.create({
       email: req.body.email,
       password: req.body.password, 
@@ -66,7 +65,6 @@ module.exports = function(app) {
           id: req.user.id
         }
     }).then(function(dbUser){
-      console.log(req.user);
         res.json(dbUser);
     });
   });
@@ -79,7 +77,6 @@ module.exports = function(app) {
       userId: req.user.id, 
       zip: req.body.zip
   }).then(function(dbUserInfo){
-      console.log(req.body);
       res.json(dbUserInfo);
   });
 });
@@ -90,7 +87,6 @@ app.get("/api/transactions/:id",function(req,res){
       id: req.params.id
     }
  }).then(function(dbTransactions){
-    //  console.log("api trans read: ", res);
      res.json(dbTransactions);
  });
 });
@@ -123,7 +119,6 @@ app.get("/api/transactions/:id",function(req,res){
       createdAt: req.body.createdAt, 
       userId: req.user.id
   }).then(function(dbTransactions){
-      console.log("api trans create: ", req.body);
       res.json(dbTransactions);
   });
 });
@@ -138,7 +133,6 @@ app.post("/points/create",function(req,res){
     createdAt: req.body.createdAt, 
     
 }).then(function(dbPoints){
-    console.log("api points create: ", req.body);
     res.json(dbPoints);
 });
 });
@@ -152,7 +146,6 @@ app.put("/update/kiosk/:id",function(req,res){
         id: req.params.id
       }
   }).then(function(dbTransactions){
-    console.log(req.body);
       res.json(dbTransactions);
   });
   });
@@ -165,7 +158,6 @@ app.put("/update/kiosk/:id",function(req,res){
         }
     }
     ).then(function(dbUser){
-      console.log("update put points with id: ", req.params.id);
         res.json(dbUser);
     });
     });
@@ -173,7 +165,6 @@ app.put("/update/kiosk/:id",function(req,res){
     app.get("/update/points/",function(req,res){
       db.User.findAll()
       .then(function(dbUser){
-        console.log("update get points with id: ", req.body);
         res.json(dbUser);
       });
       });

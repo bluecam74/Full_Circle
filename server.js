@@ -61,6 +61,7 @@ app.use(function(req, res, next){
   res.type('txt').send('Not found');
 });
 
+
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
