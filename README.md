@@ -6,7 +6,7 @@
 
 <br />
 
-<p align="center"><img src="./public/images/Full_circle_1.png" alt="Full Circle 1 Preview" width="650"></p>
+<p align="center"><img src="./public/images/Full_circle_1.PNG" alt="Full Circle 1 Preview" width="650"></p>
 
 ## About Us
 
@@ -42,7 +42,7 @@ Submit transactions and see them post in different areas according to pending, a
 
 Recycle Wizard shows how many points the user accumulated. 
 
-<p align="center"><img src="./public/images/Full_circle_2.png" alt="Full Circle 2 Preview" width="650"></p>
+<p align="center"><img src="./public/images/Full_circle_2.PNG" alt="Full Circle 2 Preview" width="650"></p>
 
 ## Technologies Used
 
